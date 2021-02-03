@@ -1,0 +1,29 @@
+{
+  "schemaVersion": 1,
+  "id": "assembly",
+  "version": "${version}",
+  "name": "Assembly",
+  "description": "Blocks! Credit to Hatsondogs for the assets!",
+  "authors": [
+    "Evoslab"
+  ],
+  "contributors": [],
+  "contact": {},
+  "license": "MIT",
+  "icon": "assets/assembly/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "com.github.evoslab.assembly.Assembly"
+    ],
+    "client": [],
+    "server": []
+  },
+  "mixins": [
+    "assembly.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.11.1",
+    "fabric": "*"
+  }
+}
