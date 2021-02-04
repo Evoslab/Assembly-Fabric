@@ -31,20 +31,22 @@ public class AssemblyBlocks {
     //Dripstone Variants
     public static final Block CHISELED_DRIPSTONE = new Block(FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK));
     public static final BlockItem CHISELED_DRIPSTONE_ITEM = new BlockItem(AssemblyBlocks.CHISELED_DRIPSTONE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-    public static final Block POLISHED_DRIPSTONE = new Block(FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK));
-    public static final BlockItem POLISHED_DRIPSTONE_ITEM = new BlockItem(AssemblyBlocks.POLISHED_DRIPSTONE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
     public static final Block DRIPSTONE_BRICKS = new Block(FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK));
     public static final BlockItem DRIPSTONE_BRICKS_ITEM = new BlockItem(AssemblyBlocks.DRIPSTONE_BRICKS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 
+    //Polished Dripstone
+    public static final Block POLISHED_DRIPSTONE = new Block(FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK));
+    public static final BlockItem POLISHED_DRIPSTONE_ITEM = new BlockItem(AssemblyBlocks.POLISHED_DRIPSTONE, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+    public static final SlabBlock POLISHED_DRIPSTONE_SLAB = new SlabBlock(FabricBlockSettings.copyOf(POLISHED_DRIPSTONE));
+    public static final BlockItem POLISHED_DRIPSTONE_SLAB_ITEM = new BlockItem(AssemblyBlocks.POLISHED_DRIPSTONE_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+    public static final AssemblyStairsBlock POLISHED_DRIPSTONE_STAIRS = new AssemblyStairsBlock(POLISHED_DRIPSTONE.getDefaultState(), AbstractBlock.Settings.copy(POLISHED_DRIPSTONE));
+    public static final BlockItem POLISHED_DRIPSTONE_STAIRS_ITEM = new BlockItem(AssemblyBlocks.POLISHED_DRIPSTONE_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+
+    //Dripstone
     public static final SlabBlock DRIPSTONE_SLAB = new SlabBlock(FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK));
     public static final BlockItem DRIPSTONE_SLAB_ITEM = new BlockItem(AssemblyBlocks.DRIPSTONE_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
     public static final AssemblyStairsBlock DRIPSTONE_STAIRS = new AssemblyStairsBlock(Blocks.DRIPSTONE_BLOCK.getDefaultState(), AbstractBlock.Settings.copy(Blocks.DRIPSTONE_BLOCK));
     public static final BlockItem DRIPSTONE_STAIRS_ITEM = new BlockItem(AssemblyBlocks.DRIPSTONE_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-
-    public static final SlabBlock POLISHED_DRIPSTONE_SLAB = new SlabBlock(FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK));
-    public static final BlockItem POLISHED_DRIPSTONE_SLAB_ITEM = new BlockItem(AssemblyBlocks.DRIPSTONE_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-    public static final AssemblyStairsBlock POLISHED_DRIPSTONE_STAIRS = new AssemblyStairsBlock(Blocks.DRIPSTONE_BLOCK.getDefaultState(), AbstractBlock.Settings.copy(Blocks.DRIPSTONE_BLOCK));
-    public static final BlockItem POLISHED_DRIPSTONE_STAIRS_ITEM = new BlockItem(AssemblyBlocks.DRIPSTONE_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 
     //Crying Obsidian Variants
     public static final Block CRYING_OBSIDIAN_TILES = new Block(FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK));

@@ -1,8 +1,8 @@
 {
   "parent": "minecraft:block/outer_stairs",
   "textures": {
-    "bottom": "assembly:block/polished_dripstone",
-    "top": "assembly:block/polished_dripstone",
-    "side": "assembly:block/polished_dripstone"
+    "bottom": "minecraft:block/dripstone_block",
+    "top": "minecraft:block/dripstone_block",
+    "side": "minecraft:block/dripstone_block"
   }
 }
