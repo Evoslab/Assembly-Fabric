@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+	{
+	  "item": "minecraft:crying_obsidian"
+	}
+  ],
+  "result": "assembly:crying_obsidian_tiles",
+  "count": 1
+}

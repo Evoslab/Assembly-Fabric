@@ -1,0 +1,8 @@
+{
+    "parent": "minecraft:block/stairs",
+    "textures": {
+        "bottom": "assembly:block/polished_amethyst",
+        "top": "assembly:block/polished_amethyst",
+        "side": "assembly:block/polished_amethyst"
+    }
+}

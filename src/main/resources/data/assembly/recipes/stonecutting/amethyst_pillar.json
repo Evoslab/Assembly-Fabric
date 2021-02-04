@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+	{
+	  "item": "assembly:polished_amethyst"
+	}
+  ],
+  "result": "assembly:amethyst_pillar",
+  "count": 1
+}

@@ -1,6 +1,7 @@
 {
-  "parent": "block/cube_all",
+  "parent": "minecraft:block/cube_column",
   "textures": {
-    "all": "assembly:block/amethyst_pillar"
+    "end": "assembly:block/polished_amethyst",
+    "side": "assembly:block/amethyst_pillar"
   }
 }

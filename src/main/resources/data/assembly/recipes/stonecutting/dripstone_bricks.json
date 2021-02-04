@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+	{
+	  "item": "assembly:polished_dripstone"
+	}
+  ],
+  "result": "assembly:dripstone_bricks",
+  "count": 1
+}

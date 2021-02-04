@@ -1,0 +1,17 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "XX",
+    "XXX"
+  ],
+  "key": {
+    "X": {
+      "item": "assembly:polished_dripstone"
+    }
+  },
+  "result": {
+    "item": "assembly:polished_dripstone_stairs",
+    "count": 4
+  }
+}
