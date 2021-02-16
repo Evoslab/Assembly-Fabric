@@ -3,11 +3,13 @@
   "id": "assembly",
   "version": "${version}",
   "name": "Assembly",
-  "description": "Blocks! Credit to Hatsondogs for the assets!",
+  "description": "Expands on 1.17 Blocks! Credit to Hatsondogs for the assets!",
   "authors": [
     "Evoslab"
   ],
-  "contributors": [],
+  "contributors": [
+    "Hatsondogs"
+  ],
   "contact": {},
   "license": "MIT",
   "icon": "assets/assembly/icon.png",
