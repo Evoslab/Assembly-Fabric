@@ -5,11 +5,11 @@
   ],
   "key": {
     "X": {
-      "item": "assembly:polished_amethyst"
+      "item": "assembly:amethyst_bricks"
     }
   },
   "result": {
-    "item": "assembly:polished_amethyst_slab",
+    "item": "assembly:amethyst_brick_slab",
     "count": 6
   }
 }

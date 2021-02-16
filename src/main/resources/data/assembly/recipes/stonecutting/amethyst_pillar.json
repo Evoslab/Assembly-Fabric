@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "ingredient": [
 	{
-	  "item": "assembly:polished_amethyst"
+	  "item": "assembly:amethyst_bricks"
 	}
   ],
   "result": "assembly:amethyst_pillar",

@@ -15,18 +15,18 @@ public class AssemblyBlocks {
     //Amethyst Variants
     public static final Block DRIPPING_AMETHYST = new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK));
     public static final BlockItem DRIPPING_AMETHYST_ITEM = new BlockItem(AssemblyBlocks.DRIPPING_AMETHYST, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-    public static final Block AMETHYST_BRICKS = new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK));
-    public static final BlockItem AMETHYST_BRICKS_ITEM = new BlockItem(AssemblyBlocks.AMETHYST_BRICKS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+    public static final Block POLISHED_AMETHYST = new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK));
+    public static final BlockItem POLISHED_AMETHYST_ITEM = new BlockItem(AssemblyBlocks.POLISHED_AMETHYST, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
     public static final PillarBlock AMETHYST_PILLAR = new PillarBlock(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK));
     public static final BlockItem AMETHYST_PILLAR_ITEM = new BlockItem(AssemblyBlocks.AMETHYST_PILLAR, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 
-    //Polished Amethyst
-    public static final Block POLISHED_AMETHYST = new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK));
-    public static final BlockItem POLISHED_AMETHYST_ITEM = new BlockItem(AssemblyBlocks.POLISHED_AMETHYST, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-    public static final SlabBlock POLISHED_AMETHYST_SLAB = new SlabBlock(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK));
-    public static final BlockItem POLISHED_AMETHYST_SLAB_ITEM = new BlockItem(AssemblyBlocks.POLISHED_AMETHYST_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-    public static final AssemblyStairsBlock POLISHED_AMETHYST_STAIRS = new AssemblyStairsBlock(Blocks.AMETHYST_BLOCK.getDefaultState(), AbstractBlock.Settings.copy(Blocks.DRIPSTONE_BLOCK));
-    public static final BlockItem POLISHED_AMETHYST_STAIRS_ITEM = new BlockItem(AssemblyBlocks.POLISHED_AMETHYST_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+    //Amethyst Bricks
+    public static final Block AMETHYST_BRICKS = new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK));
+    public static final BlockItem AMETHYST_BRICKS_ITEM = new BlockItem(AssemblyBlocks.AMETHYST_BRICKS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+    public static final SlabBlock AMETHYST_BRICK_SLAB = new SlabBlock(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK));
+    public static final BlockItem AMETHYST_BRICKS_SLAB_ITEM = new BlockItem(AssemblyBlocks.AMETHYST_BRICK_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+    public static final AssemblyStairsBlock AMETHYST_BRICKS_STAIRS = new AssemblyStairsBlock(Blocks.AMETHYST_BLOCK.getDefaultState(), AbstractBlock.Settings.copy(Blocks.DRIPSTONE_BLOCK));
+    public static final BlockItem AMETHYST_BRICKS_STAIRS_ITEM = new BlockItem(AssemblyBlocks.AMETHYST_BRICKS_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 
     //Dripstone Variants
     public static final Block CHISELED_DRIPSTONE = new Block(FabricBlockSettings.copyOf(Blocks.DRIPSTONE_BLOCK));
@@ -57,18 +57,18 @@ public class AssemblyBlocks {
         //Amethyst Variants
         Registry.register(Registry.BLOCK, new Identifier(Assembly.MOD_ID, "dripping_amethyst"), DRIPPING_AMETHYST);
         Registry.register(Registry.ITEM, new Identifier(Assembly.MOD_ID, "dripping_amethyst"), DRIPPING_AMETHYST_ITEM);
-        Registry.register(Registry.BLOCK, new Identifier(Assembly.MOD_ID, "amethyst_bricks"), AMETHYST_BRICKS);
-        Registry.register(Registry.ITEM, new Identifier(Assembly.MOD_ID, "amethyst_bricks"), AMETHYST_BRICKS_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier(Assembly.MOD_ID, "polished_amethyst"), POLISHED_AMETHYST);
+        Registry.register(Registry.ITEM, new Identifier(Assembly.MOD_ID, "polished_amethyst"), POLISHED_AMETHYST_ITEM);
         Registry.register(Registry.BLOCK, new Identifier(Assembly.MOD_ID, "amethyst_pillar"), AMETHYST_PILLAR);
         Registry.register(Registry.ITEM, new Identifier(Assembly.MOD_ID, "amethyst_pillar"), AMETHYST_PILLAR_ITEM);
 
-        //Polished Amethyst
-        Registry.register(Registry.BLOCK, new Identifier(Assembly.MOD_ID, "polished_amethyst"), POLISHED_AMETHYST);
-        Registry.register(Registry.ITEM, new Identifier(Assembly.MOD_ID, "polished_amethyst"), POLISHED_AMETHYST_ITEM);
-        Registry.register(Registry.BLOCK, new Identifier(Assembly.MOD_ID, "polished_amethyst_slab"), POLISHED_AMETHYST_SLAB);
-        Registry.register(Registry.ITEM, new Identifier(Assembly.MOD_ID, "polished_amethyst_slab"), POLISHED_AMETHYST_SLAB_ITEM);
-        Registry.register(Registry.BLOCK, new Identifier(Assembly.MOD_ID, "polished_amethyst_stairs"), POLISHED_AMETHYST_STAIRS);
-        Registry.register(Registry.ITEM, new Identifier(Assembly.MOD_ID, "polished_amethyst_stairs"), POLISHED_AMETHYST_STAIRS_ITEM);
+        //Amethyst Bricks
+        Registry.register(Registry.BLOCK, new Identifier(Assembly.MOD_ID, "amethyst_bricks"), AMETHYST_BRICKS);
+        Registry.register(Registry.ITEM, new Identifier(Assembly.MOD_ID, "amethyst_bricks"), AMETHYST_BRICKS_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier(Assembly.MOD_ID, "amethyst_brick_slab"), AMETHYST_BRICK_SLAB);
+        Registry.register(Registry.ITEM, new Identifier(Assembly.MOD_ID, "amethyst_brick_slab"), AMETHYST_BRICKS_SLAB_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier(Assembly.MOD_ID, "amethyst_brick_stairs"), AMETHYST_BRICKS_STAIRS);
+        Registry.register(Registry.ITEM, new Identifier(Assembly.MOD_ID, "amethyst_brick_stairs"), AMETHYST_BRICKS_STAIRS_ITEM);
 
         //Dripstone Variants
         Registry.register(Registry.BLOCK, new Identifier(Assembly.MOD_ID, "chiseled_dripstone"), CHISELED_DRIPSTONE);

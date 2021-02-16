@@ -1,6 +1,7 @@
 package com.github.evoslab.assembly;
 
 import com.github.evoslab.assembly.registry.AssemblyBlocks;
+//import com.github.evoslab.assembly.world.features.AssemblyFeatures;
 import net.fabricmc.api.ModInitializer;
 
 import org.apache.logging.log4j.Level;
@@ -17,6 +18,7 @@ public class Assembly implements ModInitializer {
     @Override
     public void onInitialize() {
         new AssemblyBlocks();
+        //AssemblyFeatures.registerFeatures();
         AssemblyBlocks.RegisterAssemblyBlocks();
         log(Level.INFO, "Initializing");
         //TODO: Initializer
