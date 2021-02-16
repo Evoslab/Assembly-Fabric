@@ -15,8 +15,8 @@ public class AssemblyBlocks {
     //Amethyst Variants
     public static final Block DRIPPING_AMETHYST = new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK));
     public static final BlockItem DRIPPING_AMETHYST_ITEM = new BlockItem(AssemblyBlocks.DRIPPING_AMETHYST, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-    public static final Block POLISHED_AMETHYST = new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK));
-    public static final BlockItem POLISHED_AMETHYST_ITEM = new BlockItem(AssemblyBlocks.POLISHED_AMETHYST, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+    public static final Block CHISELED_AMETHYST = new Block(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK));
+    public static final BlockItem CHISELED_AMETHYST_ITEM = new BlockItem(AssemblyBlocks.CHISELED_AMETHYST, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
     public static final PillarBlock AMETHYST_PILLAR = new PillarBlock(FabricBlockSettings.copyOf(Blocks.AMETHYST_BLOCK));
     public static final BlockItem AMETHYST_PILLAR_ITEM = new BlockItem(AssemblyBlocks.AMETHYST_PILLAR, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 
@@ -57,8 +57,8 @@ public class AssemblyBlocks {
         //Amethyst Variants
         Registry.register(Registry.BLOCK, new Identifier(Assembly.MOD_ID, "dripping_amethyst"), DRIPPING_AMETHYST);
         Registry.register(Registry.ITEM, new Identifier(Assembly.MOD_ID, "dripping_amethyst"), DRIPPING_AMETHYST_ITEM);
-        Registry.register(Registry.BLOCK, new Identifier(Assembly.MOD_ID, "polished_amethyst"), POLISHED_AMETHYST);
-        Registry.register(Registry.ITEM, new Identifier(Assembly.MOD_ID, "polished_amethyst"), POLISHED_AMETHYST_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier(Assembly.MOD_ID, "chiseled_amethyst"), CHISELED_AMETHYST);
+        Registry.register(Registry.ITEM, new Identifier(Assembly.MOD_ID, "chiseled_amethyst"), CHISELED_AMETHYST_ITEM);
         Registry.register(Registry.BLOCK, new Identifier(Assembly.MOD_ID, "amethyst_pillar"), AMETHYST_PILLAR);
         Registry.register(Registry.ITEM, new Identifier(Assembly.MOD_ID, "amethyst_pillar"), AMETHYST_PILLAR_ITEM);
 
