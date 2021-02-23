@@ -17,5 +17,14 @@
   "block.assembly.dripstone_slab": "Dripstone Slab",
   "block.assembly.dripstone_stairs": "Dripstone Stairs",
 
-  "block.assembly.crying_obsidian_tiles": "Crying Obsidian Tiles"
+  "block.assembly.crying_obsidian_tiles": "Crying Obsidian Tiles",
+
+  "block.assembly.dirt_bricks": "Dirt Bricks",
+  "block.assembly.mossy_dirt_bricks": "Mossy Dirt Bricks",
+  "block.assembly.chiseled_dirt": "Chiseled Dirt",
+  "block.assembly.dirt_tiles": "Dirt Tiles",
+
+  "block.assembly.chiseled_basalt": "Chiseled Basalt",
+  "block.assembly.basalt_tiles": "Basalt Tiles"
+
 }
