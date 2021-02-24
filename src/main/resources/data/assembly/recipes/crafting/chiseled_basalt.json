@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "X",
+    "X"
+  ],
+  "key": {
+    "X": {
+      "item": "minecraft:polished_basalt"
+    }
+  },
+  "result": {
+    "item": "assembly:chiseled_basalt",
+    "count": 2
+  }
+}

@@ -1,0 +1,16 @@
+{
+  "type": "minecraft:crafting_shaped",
+  "pattern": [
+    "XX",
+    "XX"
+  ],
+  "key": {
+    "X": {
+      "item": "assembly:dirt_bricks"
+    }
+  },
+  "result": {
+    "item": "assembly:dirt_tiles",
+    "count": 4
+  }
+}

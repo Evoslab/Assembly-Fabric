@@ -7,7 +7,7 @@
       "model": "assembly:block/amethyst_bricks"
     },
     "type=top": {
-      "model": "assembly:block/amethyst_brick_slab"
+      "model": "assembly:block/amethyst_brick_slab_top"
     }
   }
 }

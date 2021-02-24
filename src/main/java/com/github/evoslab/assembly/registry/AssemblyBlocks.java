@@ -17,12 +17,24 @@ import static net.minecraft.block.Blocks.*;
 
 public class AssemblyBlocks {
 
-    public static Block DIRT_BRICKS;
-    public static Block MOSSY_DIRT_BRICKS;
-    public static Block CHISELED_DIRT;
-    public static Block DIRT_TILES;
-
     private static final AssemblyGenerator generator = new AssemblyGenerator(MOD_ID);
+
+    //Dripstone
+    public static SlabBlock DRIPSTONE_SLAB = new SlabBlock(Properties.DRIPSTONE);
+    public static BlockItem DRIPSTONE_SLAB_ITEM = new BlockItem(AssemblyBlocks.DRIPSTONE_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+    public static AssemblyStairsBlock DRIPSTONE_STAIRS = new AssemblyStairsBlock(DRIPSTONE_BLOCK.getDefaultState(), AbstractBlock.Settings.copy(DRIPSTONE_BLOCK));
+    public static BlockItem DRIPSTONE_STAIRS_ITEM = new BlockItem(AssemblyBlocks.DRIPSTONE_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+
+    //Dripstone Variants
+    public static Block CHISELED_DRIPSTONE;
+    public static Block DRIPSTONE_BRICKS;
+
+    //Polished Dripstone
+    public static Block POLISHED_DRIPSTONE;
+    public static SlabBlock POLISHED_DRIPSTONE_SLAB = new SlabBlock(Properties.DRIPSTONE);
+    public static BlockItem POLISHED_DRIPSTONE_SLAB_ITEM = new BlockItem(AssemblyBlocks.POLISHED_DRIPSTONE_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+    public static AssemblyStairsBlock POLISHED_DRIPSTONE_STAIRS = new AssemblyStairsBlock(DRIPSTONE_BLOCK.getDefaultState(), FabricBlockSettings.copy(DRIPSTONE_BLOCK));
+    public static BlockItem POLISHED_DRIPSTONE_STAIRS_ITEM = new BlockItem(AssemblyBlocks.POLISHED_DRIPSTONE_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 
     //Amethyst Variants
     public static Block DRIPPING_AMETHYST;
@@ -34,28 +46,16 @@ public class AssemblyBlocks {
     public static Block AMETHYST_BRICKS;
     public static SlabBlock AMETHYST_BRICK_SLAB = new SlabBlock(Properties.AMETHYST);
     public static BlockItem AMETHYST_BRICK_SLAB_ITEM = new BlockItem(AssemblyBlocks.AMETHYST_BRICK_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-    public static AssemblyStairsBlock AMETHYST_BRICKS_STAIRS = new AssemblyStairsBlock(Blocks.AMETHYST_BLOCK.getDefaultState(), AbstractBlock.Settings.copy(DRIPSTONE_BLOCK));
+    public static AssemblyStairsBlock AMETHYST_BRICKS_STAIRS = new AssemblyStairsBlock(Blocks.AMETHYST_BLOCK.getDefaultState(), FabricBlockSettings.copy(DRIPSTONE_BLOCK));
     public static BlockItem AMETHYST_BRICKS_STAIRS_ITEM = new BlockItem(AssemblyBlocks.AMETHYST_BRICKS_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-
-    //Dripstone Variants
-    public static Block CHISELED_DRIPSTONE;
-    public static Block DRIPSTONE_BRICKS;
-
-    //Polished Dripstone
-    public static Block POLISHED_DRIPSTONE;
-    public static SlabBlock POLISHED_DRIPSTONE_SLAB = new SlabBlock(Properties.DRIPSTONE);
-    public static BlockItem POLISHED_DRIPSTONE_SLAB_ITEM = new BlockItem(AssemblyBlocks.POLISHED_DRIPSTONE_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-    //public static AssemblyStairsBlock POLISHED_DRIPSTONE_STAIRS = new AssemblyStairsBlock(DRIPSTONE_BLOCK.getDefaultState(), AbstractBlock.Settings.copy(POLISHED_DRIPSTONE));
-    //public static BlockItem POLISHED_DRIPSTONE_STAIRS_ITEM = new BlockItem(AssemblyBlocks.POLISHED_DRIPSTONE_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-
-    //Dripstone
-    public static SlabBlock DRIPSTONE_SLAB = new SlabBlock(Properties.DRIPSTONE);
-    public static BlockItem DRIPSTONE_SLAB_ITEM = new BlockItem(AssemblyBlocks.DRIPSTONE_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-    public static AssemblyStairsBlock DRIPSTONE_STAIRS = new AssemblyStairsBlock(DRIPSTONE_BLOCK.getDefaultState(), AbstractBlock.Settings.copy(DRIPSTONE_BLOCK));
-    public static BlockItem DRIPSTONE_STAIRS_ITEM = new BlockItem(AssemblyBlocks.DRIPSTONE_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 
     //Crying Obsidian Variant
     public static Block CRYING_OBSIDIAN_TILES;
+
+    public static Block DIRT_BRICKS;
+    public static Block MOSSY_DIRT_BRICKS;
+    public static Block CHISELED_DIRT;
+    public static Block DIRT_TILES;
 
     //Basalt Variants
     public static Block CHISELED_BASALT;
@@ -63,6 +63,12 @@ public class AssemblyBlocks {
 
     public static void RegisterAssemblyBlocks() {
 
+        //Dripstone
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "dripstone_slab"), DRIPSTONE_SLAB);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "dripstone_slab"), DRIPSTONE_SLAB_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "dripstone_stairs"), DRIPSTONE_STAIRS);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "dripstone_stairs"), DRIPSTONE_STAIRS_ITEM);
+        //here up is last recipe
         //Amethyst Variants
         DRIPPING_AMETHYST = generator.block.registerBlandBlock(new Block(Properties.AMETHYST), "dripping_amethyst");
         CHISELED_AMETHYST = generator.block.registerBlandBlock(new Block(Properties.AMETHYST), "chiseled_amethyst");
@@ -73,8 +79,8 @@ public class AssemblyBlocks {
         AMETHYST_BRICKS = generator.block.registerBlandBlock(new Block(Properties.AMETHYST), "amethyst_bricks");
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "amethyst_brick_slab"), AMETHYST_BRICK_SLAB);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "amethyst_brick_slab"), AMETHYST_BRICK_SLAB_ITEM);
-        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "amethyst_brick_stairs"), AMETHYST_BRICKS_STAIRS);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "amethyst_brick_stairs"), AMETHYST_BRICKS_STAIRS_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "amethyst_brick_stairs"), AMETHYST_BRICKS_STAIRS);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "amethyst_brick_stairs"), AMETHYST_BRICKS_STAIRS_ITEM);
 
         //Dripstone Variants
         CHISELED_DRIPSTONE = generator.block.registerBlandBlock(new Block(Properties.DRIPSTONE), "chiseled_dripstone");
@@ -82,16 +88,10 @@ public class AssemblyBlocks {
 
         //Polished Dripstone
         POLISHED_DRIPSTONE = generator.block.registerBlandBlock(new Block(Properties.DRIPSTONE), "polished_dripstone");
-        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "polished_dripstone_slab"), POLISHED_DRIPSTONE_SLAB);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "polished_dripstone_slab"), POLISHED_DRIPSTONE_SLAB_ITEM);
-        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "polished_dripstone_stairs"), POLISHED_DRIPSTONE_STAIRS);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "polished_dripstone_stairs"), POLISHED_DRIPSTONE_STAIRS_ITEM);
-
-        //Dripstone
-        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "dripstone_slab"), DRIPSTONE_SLAB);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "dripstone_slab"), DRIPSTONE_SLAB_ITEM);
-        //Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "dripstone_stairs"), DRIPSTONE_STAIRS);
-        //Registry.register(Registry.ITEM, new Identifier(MOD_ID, "dripstone_stairs"), DRIPSTONE_STAIRS_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "polished_dripstone_slab"), POLISHED_DRIPSTONE_SLAB);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "polished_dripstone_slab"), POLISHED_DRIPSTONE_SLAB_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "polished_dripstone_stairs"), POLISHED_DRIPSTONE_STAIRS);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "polished_dripstone_stairs"), POLISHED_DRIPSTONE_STAIRS_ITEM);
 
         //Crying Obsidian Variants
         CRYING_OBSIDIAN_TILES = generator.block.registerBlandBlock(new Block(Properties.CRYING_OBSIDIANS), "crying_obsidian_tiles");
