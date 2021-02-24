@@ -5,6 +5,6 @@
       "item": "assembly:dirt_bricks"
     }
   ],
-  "result": "assembly:dirt_tiles",
-  "count": 1
+  "result": "assembly:dirt_brick_slab",
+  "count": 2
 }

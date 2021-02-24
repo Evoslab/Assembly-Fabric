@@ -7,11 +7,11 @@
   ],
   "key": {
     "X": {
-      "item": "minecraft:dripstone_block"
+      "item": "assembly:dirt_bricks"
     }
   },
   "result": {
-    "item": "assembly:dripstone_stairs",
+    "item": "assembly:dirt_brick_stairs",
     "count": 4
   }
 }

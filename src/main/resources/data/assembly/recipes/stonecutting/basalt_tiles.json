@@ -1,16 +1,10 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "XX",
-    "XX"
-  ],
-  "key": {
-    "X": {
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
       "item": "minecraft:polished_basalt"
     }
-  },
-  "result": {
-    "item": "assembly:basalt_tiles",
-    "count": 4
-  }
+  ],
+  "result": "assembly:basalt_tiles",
+  "count": 1
 }

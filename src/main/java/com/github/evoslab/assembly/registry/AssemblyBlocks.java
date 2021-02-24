@@ -46,14 +46,22 @@ public class AssemblyBlocks {
     public static Block AMETHYST_BRICKS;
     public static SlabBlock AMETHYST_BRICK_SLAB = new SlabBlock(Properties.AMETHYST);
     public static BlockItem AMETHYST_BRICK_SLAB_ITEM = new BlockItem(AssemblyBlocks.AMETHYST_BRICK_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-    public static AssemblyStairsBlock AMETHYST_BRICKS_STAIRS = new AssemblyStairsBlock(Blocks.AMETHYST_BLOCK.getDefaultState(), FabricBlockSettings.copy(DRIPSTONE_BLOCK));
-    public static BlockItem AMETHYST_BRICKS_STAIRS_ITEM = new BlockItem(AssemblyBlocks.AMETHYST_BRICKS_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+    public static AssemblyStairsBlock AMETHYST_BRICK_STAIRS = new AssemblyStairsBlock(Blocks.AMETHYST_BLOCK.getDefaultState(), FabricBlockSettings.copy(DRIPSTONE_BLOCK));
+    public static BlockItem AMETHYST_BRICK_STAIRS_ITEM = new BlockItem(AssemblyBlocks.AMETHYST_BRICK_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 
     //Crying Obsidian Variant
     public static Block CRYING_OBSIDIAN_TILES;
 
     public static Block DIRT_BRICKS;
+    public static SlabBlock DIRT_BRICK_SLAB = new SlabBlock(Properties.DIRT_BRICKS);
+    public static BlockItem DIRT_BRICK_SLAB_ITEM = new BlockItem(AssemblyBlocks.DIRT_BRICK_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+    public static AssemblyStairsBlock DIRT_BRICK_STAIRS = new AssemblyStairsBlock(DIRT.getDefaultState(), AbstractBlock.Settings.copy(DIRT).strength(2.0F, 6.0F));
+    public static BlockItem DIRT_BRICK_STAIRS_ITEM = new BlockItem(AssemblyBlocks.DIRT_BRICK_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
     public static Block MOSSY_DIRT_BRICKS;
+    public static SlabBlock MOSSY_DIRT_BRICK_SLAB = new SlabBlock(Properties.DIRT_BRICKS);
+    public static BlockItem MOSSY_DIRT_BRICK_SLAB_ITEM = new BlockItem(AssemblyBlocks.MOSSY_DIRT_BRICK_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
+    public static AssemblyStairsBlock MOSSY_DIRT_BRICK_STAIRS = new AssemblyStairsBlock(DIRT.getDefaultState(), AbstractBlock.Settings.copy(DIRT).strength(2.0F, 6.0F));
+    public static BlockItem MOSSY_DIRT_BRICK_STAIRS_ITEM = new BlockItem(AssemblyBlocks.MOSSY_DIRT_BRICK_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
     public static Block CHISELED_DIRT;
     public static Block DIRT_TILES;
 
@@ -68,7 +76,6 @@ public class AssemblyBlocks {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "dripstone_slab"), DRIPSTONE_SLAB_ITEM);
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "dripstone_stairs"), DRIPSTONE_STAIRS);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "dripstone_stairs"), DRIPSTONE_STAIRS_ITEM);
-        //here up is last recipe
         //Amethyst Variants
         DRIPPING_AMETHYST = generator.block.registerBlandBlock(new Block(Properties.AMETHYST), "dripping_amethyst");
         CHISELED_AMETHYST = generator.block.registerBlandBlock(new Block(Properties.AMETHYST), "chiseled_amethyst");
@@ -79,8 +86,8 @@ public class AssemblyBlocks {
         AMETHYST_BRICKS = generator.block.registerBlandBlock(new Block(Properties.AMETHYST), "amethyst_bricks");
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "amethyst_brick_slab"), AMETHYST_BRICK_SLAB);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "amethyst_brick_slab"), AMETHYST_BRICK_SLAB_ITEM);
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "amethyst_brick_stairs"), AMETHYST_BRICKS_STAIRS);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "amethyst_brick_stairs"), AMETHYST_BRICKS_STAIRS_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "amethyst_brick_stairs"), AMETHYST_BRICK_STAIRS);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "amethyst_brick_stairs"), AMETHYST_BRICK_STAIRS_ITEM);
 
         //Dripstone Variants
         CHISELED_DRIPSTONE = generator.block.registerBlandBlock(new Block(Properties.DRIPSTONE), "chiseled_dripstone");
@@ -98,7 +105,15 @@ public class AssemblyBlocks {
 
         //Dirt Bricks
         DIRT_BRICKS = generator.block.registerBlandBlock(new Block(Properties.DIRT_BRICKS), "dirt_bricks");
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "dirt_brick_slab"), DIRT_BRICK_SLAB);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "dirt_brick_slab"), DIRT_BRICK_SLAB_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "dirt_brick_stairs"), DIRT_BRICK_STAIRS);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "dirt_brick_stairs"), DIRT_BRICK_STAIRS_ITEM);
         MOSSY_DIRT_BRICKS = generator.block.registerBlandBlock(new Block(Properties.DIRT_BRICKS), "mossy_dirt_bricks");
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "mossy_dirt_brick_slab"), MOSSY_DIRT_BRICK_SLAB);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mossy_dirt_brick_slab"), MOSSY_DIRT_BRICK_SLAB_ITEM);
+        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "mossy_dirt_brick_stairs"), MOSSY_DIRT_BRICK_STAIRS);
+        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mossy_dirt_brick_stairs"), MOSSY_DIRT_BRICK_STAIRS_ITEM);
         CHISELED_DIRT = generator.block.registerBlandBlock(new Block(Properties.DIRT_BRICKS), "chiseled_dirt");
         DIRT_TILES = generator.block.registerBlandBlock(new Block(Properties.DIRT_BRICKS), "dirt_tiles");
 
@@ -122,10 +137,12 @@ public class AssemblyBlocks {
                 .requiresTool();
 
         public static final FabricBlockSettings DRIPSTONE = FabricBlockSettings
-                .copyOf(DRIPSTONE_BLOCK);
+                .copyOf(DRIPSTONE_BLOCK)
+                .sounds(BlockSoundGroup.DRIPSTONE_BLOCK);
 
         public static final FabricBlockSettings BASALT = FabricBlockSettings
-                .copyOf(POLISHED_BASALT);
+                .copyOf(POLISHED_BASALT)
+                .sounds(BlockSoundGroup.BASALT);
 
         public static final FabricBlockSettings CRYING_OBSIDIANS = FabricBlockSettings
                 .copyOf(CRYING_OBSIDIAN);

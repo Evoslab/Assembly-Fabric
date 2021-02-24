@@ -1,0 +1,10 @@
+{
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
+      "item": "assembly:mossy_dirt_bricks"
+    }
+  ],
+  "result": "assembly:mossy_dirt_brick_slab",
+  "count": 2
+}

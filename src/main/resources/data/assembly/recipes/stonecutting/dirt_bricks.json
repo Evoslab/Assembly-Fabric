@@ -1,16 +1,10 @@
 {
-  "type": "minecraft:crafting_shaped",
-  "pattern": [
-    "XX",
-    "XX"
-  ],
-  "key": {
-    "X": {
+  "type": "minecraft:stonecutting",
+  "ingredient": [
+    {
       "item": "minecraft:dirt"
     }
-  },
-  "result": {
-    "item": "assembly:dirt_bricks",
-    "count": 4
-  }
+  ],
+  "result": "assembly:dirt_bricks",
+  "count": 1
 }

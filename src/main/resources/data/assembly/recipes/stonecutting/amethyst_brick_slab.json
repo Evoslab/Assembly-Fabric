@@ -2,7 +2,7 @@
   "type": "minecraft:stonecutting",
   "ingredient": [
 	{
-	  "item": "minecraft:amethyst_bricks"
+	  "item": "assembly:amethyst_bricks"
 	}
   ],
   "result": "assembly:amethyst_brick_slab",

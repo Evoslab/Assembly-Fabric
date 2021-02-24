@@ -1,17 +1,15 @@
 {
   "type": "minecraft:crafting_shaped",
   "pattern": [
-    "X  ",
-    "XX ",
     "XXX"
   ],
   "key": {
     "X": {
-      "item": "minecraft:dripstone_block"
+      "item": "assembly:dirt_bricks"
     }
   },
   "result": {
-    "item": "assembly:dripstone_stairs",
-    "count": 4
+    "item": "assembly:dirt_brick_slab",
+    "count": 6
   }
 }

@@ -6,11 +6,11 @@
   ],
   "key": {
     "X": {
-      "item": "assembly:dripstone_slab"
+      "item": "assembly:dirt_brick_slab"
     }
   },
   "result": {
-    "item": "assembly:chiseled_dripstone",
+    "item": "assembly:chiseled_dirt",
     "count": 1
   }
 }

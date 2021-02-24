@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/slab_top",
+  "textures": {
+    "bottom": "assembly:block/mossy_dirt_bricks",
+    "top": "assembly:block/mossy_dirt_bricks",
+    "side": "assembly:block/mossy_dirt_bricks"
+  }
+}
