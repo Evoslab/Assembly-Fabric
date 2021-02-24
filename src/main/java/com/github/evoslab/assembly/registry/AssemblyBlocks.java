@@ -68,6 +68,7 @@ public class AssemblyBlocks {
     //Basalt Variants
     public static Block CHISELED_BASALT;
     public static Block BASALT_TILES;
+    public static Block POLISHED_DIRT;
 
     public static void RegisterAssemblyBlocks() {
 
@@ -116,6 +117,7 @@ public class AssemblyBlocks {
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mossy_dirt_brick_stairs"), MOSSY_DIRT_BRICK_STAIRS_ITEM);
         CHISELED_DIRT = generator.block.registerBlandBlock(new Block(Properties.DIRT_BRICKS), "chiseled_dirt");
         DIRT_TILES = generator.block.registerBlandBlock(new Block(Properties.DIRT_BRICKS), "dirt_tiles");
+        POLISHED_DIRT = generator.block.registerBlandBlock(new Block(Properties.DIRT_BRICKS), "polished_dirt");
 
         //Basalt Variants
         CHISELED_BASALT = generator.block.registerBlandBlock(new Block(Properties.BASALT), "chiseled_basalt");
