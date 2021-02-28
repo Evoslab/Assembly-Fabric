@@ -1,0 +1,35 @@
+{
+  "block.assembly.dripping_amethyst": "Amatista goteante",
+  "block.assembly.chiseled_amethyst": "Amatista cincelada",
+  "block.assembly.amethyst_pillar": "Columna de amatista",
+
+  "block.assembly.amethyst_bricks": "Ladrillos de amatista",
+  "block.assembly.amethyst_brick_slab": "Baldosa de ladrillos de amatista",
+  "block.assembly.amethyst_brick_stairs": "Escaleras de ladrillos de amatista",
+
+  "block.assembly.chiseled_dripstone": "Espeleotema cincelado",
+  "block.assembly.dripstone_bricks": "Ladrillos de espeleotema",
+
+  "block.assembly.polished_dripstone": "Espeleotema pulido",
+  "block.assembly.polished_dripstone_slab": "Losa de espeleotema pulido",
+  "block.assembly.polished_dripstone_stairs": "Escaleras de espeleotema pulido",
+
+  "block.assembly.dripstone_slab": "Baldosa de espeleotema",
+  "block.assembly.dripstone_stairs": "Escaleras de espeleotema",
+
+  "block.assembly.crying_obsidian_tiles": "Losetas de obsidiana llorosa",
+
+  "block.assembly.dirt_bricks": "Ladrillos de tierra",
+  "block.assembly.dirt_brick_slab": "Baldosa de ladrillos de tierra",
+  "block.assembly.dirt_brick_stairs": "Escaleras de ladrillos de tierra",
+  "block.assembly.mossy_dirt_bricks": "Ladrillos de tierra musgosos",
+  "block.assembly.mossy_dirt_brick_slab": "Baldosa de ladrillos de tierra musgosos",
+  "block.assembly.mossy_dirt_brick_stairs": "Escaleras de ladrillos de tierra musgosos",
+  "block.assembly.chiseled_dirt": "Tierra cincelada",
+  "block.assembly.dirt_tiles": "Losetas de tierra",
+  "block.assembly.polished_dirt": "Tierra pulida",
+
+  "block.assembly.chiseled_basalt": "Basalto cincelado",
+  "block.assembly.basalt_tiles": "Losetas de basalto"
+
+}
