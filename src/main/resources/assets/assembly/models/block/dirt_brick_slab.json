@@ -1,8 +1,0 @@
-{
-  "parent": "minecraft:block/slab",
-  "textures": {
-    "bottom": "assembly:block/dirt_bricks",
-    "top": "assembly:block/dirt_bricks",
-    "side": "assembly:block/dirt_bricks"
-  }
-}

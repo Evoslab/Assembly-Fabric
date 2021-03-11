@@ -23,11 +23,18 @@ dependencies {
 
 	//ARRP
 	modImplementation group: 'net.devtech', name: 'arrp', version: '0.3.7'
+
+	//Cookie Core
+	modImplementation group: 'com.github.evoslab', name: 'cookiecore', version: '0.0.2'
+
 }
 
 repositories {
 	maven {
 		url = 'https://raw.githubusercontent.com/Devan-Kerman/Devan-Repo/master/'
+	}
+	maven {
+		url = 'https://raw.githubusercontent.com/Evoslab/Evoslab-Maven-Repo/master/'
 	}
 }
 

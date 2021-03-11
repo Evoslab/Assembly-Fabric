@@ -1,7 +1,7 @@
 package com.github.evoslab.assembly.registry;
 
-import com.github.evoslab.assembly.blocks.AssemblyStairsBlock;
-import com.github.evoslab.assembly.json.AssemblyGenerator;
+import com.github.evoslab.cookiecore.blocks.main.CookieCoreStairsBlock;
+import com.github.evoslab.cookiecore.datagen.MainGenerator;
 import net.fabricmc.fabric.api.object.builder.v1.block.FabricBlockSettings;
 import net.fabricmc.fabric.api.tool.attribute.v1.FabricToolTags;
 import net.minecraft.block.*;
@@ -17,12 +17,12 @@ import static net.minecraft.block.Blocks.*;
 
 public class AssemblyBlocks {
 
-    private static final AssemblyGenerator generator = new AssemblyGenerator(MOD_ID);
+    private static final MainGenerator generator = new MainGenerator(MOD_ID);
 
     //Dripstone
     public static SlabBlock DRIPSTONE_SLAB = new SlabBlock(Properties.DRIPSTONE);
     public static BlockItem DRIPSTONE_SLAB_ITEM = new BlockItem(AssemblyBlocks.DRIPSTONE_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-    public static AssemblyStairsBlock DRIPSTONE_STAIRS = new AssemblyStairsBlock(DRIPSTONE_BLOCK.getDefaultState(), AbstractBlock.Settings.copy(DRIPSTONE_BLOCK));
+    public static CookieCoreStairsBlock DRIPSTONE_STAIRS = new CookieCoreStairsBlock(DRIPSTONE_BLOCK.getDefaultState(), AbstractBlock.Settings.copy(DRIPSTONE_BLOCK));
     public static BlockItem DRIPSTONE_STAIRS_ITEM = new BlockItem(AssemblyBlocks.DRIPSTONE_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 
     //Dripstone Variants
@@ -33,7 +33,7 @@ public class AssemblyBlocks {
     public static Block POLISHED_DRIPSTONE;
     public static SlabBlock POLISHED_DRIPSTONE_SLAB = new SlabBlock(Properties.DRIPSTONE);
     public static BlockItem POLISHED_DRIPSTONE_SLAB_ITEM = new BlockItem(AssemblyBlocks.POLISHED_DRIPSTONE_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-    public static AssemblyStairsBlock POLISHED_DRIPSTONE_STAIRS = new AssemblyStairsBlock(DRIPSTONE_BLOCK.getDefaultState(), FabricBlockSettings.copy(DRIPSTONE_BLOCK));
+    public static CookieCoreStairsBlock POLISHED_DRIPSTONE_STAIRS = new CookieCoreStairsBlock(DRIPSTONE_BLOCK.getDefaultState(), FabricBlockSettings.copy(DRIPSTONE_BLOCK));
     public static BlockItem POLISHED_DRIPSTONE_STAIRS_ITEM = new BlockItem(AssemblyBlocks.POLISHED_DRIPSTONE_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 
     //Amethyst Variants
@@ -44,9 +44,9 @@ public class AssemblyBlocks {
 
     //Amethyst Bricks
     public static Block AMETHYST_BRICKS;
-    public static SlabBlock AMETHYST_BRICK_SLAB = new SlabBlock(Properties.AMETHYST);
+    public static SlabBlock AMETHYST_BRICK_SLAB;
     public static BlockItem AMETHYST_BRICK_SLAB_ITEM = new BlockItem(AssemblyBlocks.AMETHYST_BRICK_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-    public static AssemblyStairsBlock AMETHYST_BRICK_STAIRS = new AssemblyStairsBlock(Blocks.AMETHYST_BLOCK.getDefaultState(), FabricBlockSettings.copy(DRIPSTONE_BLOCK));
+    public static CookieCoreStairsBlock AMETHYST_BRICK_STAIRS;
     public static BlockItem AMETHYST_BRICK_STAIRS_ITEM = new BlockItem(AssemblyBlocks.AMETHYST_BRICK_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
 
     //Crying Obsidian Variant
@@ -55,12 +55,12 @@ public class AssemblyBlocks {
     public static Block DIRT_BRICKS;
     public static SlabBlock DIRT_BRICK_SLAB = new SlabBlock(Properties.DIRT_BRICKS);
     public static BlockItem DIRT_BRICK_SLAB_ITEM = new BlockItem(AssemblyBlocks.DIRT_BRICK_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-    public static AssemblyStairsBlock DIRT_BRICK_STAIRS = new AssemblyStairsBlock(DIRT.getDefaultState(), AbstractBlock.Settings.copy(DIRT).strength(2.0F, 6.0F));
+    public static CookieCoreStairsBlock DIRT_BRICK_STAIRS = new CookieCoreStairsBlock(DIRT.getDefaultState(), AbstractBlock.Settings.copy(DIRT).strength(2.0F, 6.0F));
     public static BlockItem DIRT_BRICK_STAIRS_ITEM = new BlockItem(AssemblyBlocks.DIRT_BRICK_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
     public static Block MOSSY_DIRT_BRICKS;
     public static SlabBlock MOSSY_DIRT_BRICK_SLAB = new SlabBlock(Properties.DIRT_BRICKS);
     public static BlockItem MOSSY_DIRT_BRICK_SLAB_ITEM = new BlockItem(AssemblyBlocks.MOSSY_DIRT_BRICK_SLAB, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
-    public static AssemblyStairsBlock MOSSY_DIRT_BRICK_STAIRS = new AssemblyStairsBlock(DIRT.getDefaultState(), AbstractBlock.Settings.copy(DIRT).strength(2.0F, 6.0F));
+    public static CookieCoreStairsBlock MOSSY_DIRT_BRICK_STAIRS = new CookieCoreStairsBlock(DIRT.getDefaultState(), AbstractBlock.Settings.copy(DIRT).strength(2.0F, 6.0F));
     public static BlockItem MOSSY_DIRT_BRICK_STAIRS_ITEM = new BlockItem(AssemblyBlocks.MOSSY_DIRT_BRICK_STAIRS, new Item.Settings().group(ItemGroup.BUILDING_BLOCKS));
     public static Block CHISELED_DIRT;
     public static Block DIRT_TILES;
@@ -70,58 +70,49 @@ public class AssemblyBlocks {
     public static Block BASALT_TILES;
     public static Block POLISHED_DIRT;
 
-    public static void RegisterAssemblyBlocks() {
+    public static void init() {
 
         //Dripstone
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "dripstone_slab"), DRIPSTONE_SLAB);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "dripstone_slab"), DRIPSTONE_SLAB_ITEM);
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "dripstone_stairs"), DRIPSTONE_STAIRS);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "dripstone_stairs"), DRIPSTONE_STAIRS_ITEM);
+        DRIPSTONE_SLAB = generator.block.registerSlabBlock(new SlabBlock(Properties.DRIPSTONE), "dripstone_slab","");
+        DRIPSTONE_STAIRS = generator.block.registerSlabBlock(new CookieCoreStairsBlock(DRIPSTONE_BLOCK.getDefaultState(), FabricBlockSettings.copy(DRIPSTONE_BLOCK)), "dripstone_stairs","Dripstone Stairs");
+
         //Amethyst Variants
-        DRIPPING_AMETHYST = generator.block.registerBlandBlock(new Block(Properties.AMETHYST), "dripping_amethyst");
-        CHISELED_AMETHYST = generator.block.registerBlandBlock(new Block(Properties.AMETHYST), "chiseled_amethyst");
+        DRIPPING_AMETHYST = generator.block.registerAllSidedBlock(new Block(Properties.AMETHYST), "dripping_amethyst","");
+        CHISELED_AMETHYST = generator.block.registerAllSidedBlock(new Block(Properties.AMETHYST), "chiseled_amethyst","");
         Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "amethyst_pillar"), AMETHYST_PILLAR);
         Registry.register(Registry.ITEM, new Identifier(MOD_ID, "amethyst_pillar"), AMETHYST_PILLAR_ITEM);
 
         //Amethyst Bricks
-        AMETHYST_BRICKS = generator.block.registerBlandBlock(new Block(Properties.AMETHYST), "amethyst_bricks");
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "amethyst_brick_slab"), AMETHYST_BRICK_SLAB);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "amethyst_brick_slab"), AMETHYST_BRICK_SLAB_ITEM);
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "amethyst_brick_stairs"), AMETHYST_BRICK_STAIRS);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "amethyst_brick_stairs"), AMETHYST_BRICK_STAIRS_ITEM);
+        AMETHYST_BRICKS = generator.block.registerAllSidedBlock(new Block(Properties.AMETHYST), "amethyst_bricks","");
+        AMETHYST_BRICK_SLAB = generator.block.registerSlabBlock(new SlabBlock(Properties.AMETHYST), "amethyst_brick_slab","");
+        AMETHYST_BRICK_STAIRS = generator.block.registerSlabBlock(new CookieCoreStairsBlock(Blocks.AMETHYST_BLOCK.getDefaultState(), FabricBlockSettings.copy(AMETHYST_BRICKS)), "amethyst_brick_stairs","");
 
         //Dripstone Variants
-        CHISELED_DRIPSTONE = generator.block.registerBlandBlock(new Block(Properties.DRIPSTONE), "chiseled_dripstone");
-        DRIPSTONE_BRICKS = generator.block.registerBlandBlock(new Block(Properties.DRIPSTONE), "dripstone_bricks");
+        CHISELED_DRIPSTONE = generator.block.registerAllSidedBlock(new Block(Properties.DRIPSTONE), "chiseled_dripstone","");
+        DRIPSTONE_BRICKS = generator.block.registerAllSidedBlock(new Block(Properties.DRIPSTONE), "dripstone_bricks","");
 
         //Polished Dripstone
-        POLISHED_DRIPSTONE = generator.block.registerBlandBlock(new Block(Properties.DRIPSTONE), "polished_dripstone");
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "polished_dripstone_slab"), POLISHED_DRIPSTONE_SLAB);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "polished_dripstone_slab"), POLISHED_DRIPSTONE_SLAB_ITEM);
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "polished_dripstone_stairs"), POLISHED_DRIPSTONE_STAIRS);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "polished_dripstone_stairs"), POLISHED_DRIPSTONE_STAIRS_ITEM);
+        POLISHED_DRIPSTONE = generator.block.registerAllSidedBlock(new Block(Properties.DRIPSTONE), "polished_dripstone","");
+        POLISHED_DRIPSTONE_SLAB = generator.block.registerSlabBlock(new SlabBlock(Properties.AMETHYST), "polished_dripstone_slab","");
+        POLISHED_DRIPSTONE_STAIRS = generator.block.registerSlabBlock(new CookieCoreStairsBlock(Blocks.AMETHYST_BLOCK.getDefaultState(), FabricBlockSettings.copy(AMETHYST_BRICKS)), "polished_dripstone_stairs","");
 
         //Crying Obsidian Variants
-        CRYING_OBSIDIAN_TILES = generator.block.registerBlandBlock(new Block(Properties.CRYING_OBSIDIANS), "crying_obsidian_tiles");
+        CRYING_OBSIDIAN_TILES = generator.block.registerAllSidedBlock(new Block(Properties.CRYING_OBSIDIANS), "crying_obsidian_tiles","");
 
         //Dirt Bricks
-        DIRT_BRICKS = generator.block.registerBlandBlock(new Block(Properties.DIRT_BRICKS), "dirt_bricks");
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "dirt_brick_slab"), DIRT_BRICK_SLAB);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "dirt_brick_slab"), DIRT_BRICK_SLAB_ITEM);
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "dirt_brick_stairs"), DIRT_BRICK_STAIRS);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "dirt_brick_stairs"), DIRT_BRICK_STAIRS_ITEM);
-        MOSSY_DIRT_BRICKS = generator.block.registerBlandBlock(new Block(Properties.DIRT_BRICKS), "mossy_dirt_bricks");
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "mossy_dirt_brick_slab"), MOSSY_DIRT_BRICK_SLAB);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mossy_dirt_brick_slab"), MOSSY_DIRT_BRICK_SLAB_ITEM);
-        Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "mossy_dirt_brick_stairs"), MOSSY_DIRT_BRICK_STAIRS);
-        Registry.register(Registry.ITEM, new Identifier(MOD_ID, "mossy_dirt_brick_stairs"), MOSSY_DIRT_BRICK_STAIRS_ITEM);
-        CHISELED_DIRT = generator.block.registerBlandBlock(new Block(Properties.DIRT_BRICKS), "chiseled_dirt");
-        DIRT_TILES = generator.block.registerBlandBlock(new Block(Properties.DIRT_BRICKS), "dirt_tiles");
-        POLISHED_DIRT = generator.block.registerBlandBlock(new Block(Properties.DIRT_BRICKS), "polished_dirt");
+        DIRT_BRICKS = generator.block.registerAllSidedBlock(new Block(Properties.DIRT_BRICKS), "dirt_bricks","");
+        DIRT_BRICK_SLAB = generator.block.registerSlabBlock(new SlabBlock(Properties.AMETHYST), "dirt_brick_slab","");
+        DIRT_BRICK_STAIRS = generator.block.registerSlabBlock(new CookieCoreStairsBlock(Blocks.AMETHYST_BLOCK.getDefaultState(), FabricBlockSettings.copy(AMETHYST_BRICKS)), "dirt_brick_stairs","");
+        MOSSY_DIRT_BRICKS = generator.block.registerAllSidedBlock(new Block(Properties.DIRT_BRICKS), "mossy_dirt_bricks","");
+        MOSSY_DIRT_BRICK_SLAB = generator.block.registerSlabBlock(new SlabBlock(Properties.AMETHYST), "mossy_dirt_brick_slab","");
+        DIRT_BRICK_STAIRS = generator.block.registerSlabBlock(new CookieCoreStairsBlock(Blocks.AMETHYST_BLOCK.getDefaultState(), FabricBlockSettings.copy(AMETHYST_BRICKS)), "mossy_dirt_brick_stairs","");Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "mossy_dirt_brick_slab"), MOSSY_DIRT_BRICK_SLAB);
+        CHISELED_DIRT = generator.block.registerAllSidedBlock(new Block(Properties.DIRT_BRICKS), "chiseled_dirt","");
+        DIRT_TILES = generator.block.registerAllSidedBlock(new Block(Properties.DIRT_BRICKS), "dirt_tiles","");
+        POLISHED_DIRT = generator.block.registerAllSidedBlock(new Block(Properties.DIRT_BRICKS), "polished_dirt","");
 
         //Basalt Variants
-        CHISELED_BASALT = generator.block.registerBlandBlock(new Block(Properties.BASALT), "chiseled_basalt");
-        BASALT_TILES = generator.block.registerBlandBlock(new Block(Properties.BASALT), "basalt_tiles");
+        CHISELED_BASALT = generator.block.registerAllSidedBlock(new Block(Properties.BASALT), "chiseled_basalt","");
+        BASALT_TILES = generator.block.registerAllSidedBlock(new Block(Properties.BASALT), "basalt_tiles","");
 
     }
 
