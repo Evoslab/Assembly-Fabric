@@ -74,7 +74,7 @@ public class AssemblyBlocks {
 
         //Dripstone
         DRIPSTONE_SLAB = generator.block.registerSlabBlock(new SlabBlock(Properties.DRIPSTONE), "dripstone_slab","");
-        DRIPSTONE_STAIRS = generator.block.registerSlabBlock(new CookieCoreStairsBlock(DRIPSTONE_BLOCK.getDefaultState(), FabricBlockSettings.copy(DRIPSTONE_BLOCK)), "dripstone_stairs","Dripstone Stairs");
+        DRIPSTONE_STAIRS = generator.block.registerSlabBlock(new CookieCoreStairsBlock(DRIPSTONE_BLOCK.getDefaultState(), FabricBlockSettings.copy(DRIPSTONE_BLOCK)), "dripstone_stairs","");
 
         //Amethyst Variants
         DRIPPING_AMETHYST = generator.block.registerAllSidedBlock(new Block(Properties.AMETHYST), "dripping_amethyst","");
