@@ -93,19 +93,19 @@ public class AssemblyBlocks {
 
         //Polished Dripstone
         POLISHED_DRIPSTONE = generator.block.registerAllSidedBlock(new Block(Properties.DRIPSTONE), "polished_dripstone","");
-        POLISHED_DRIPSTONE_SLAB = generator.block.registerSlabBlock(new SlabBlock(Properties.AMETHYST), "polished_dripstone_slab","");
-        POLISHED_DRIPSTONE_STAIRS = generator.block.registerSlabBlock(new CookieCoreStairsBlock(Blocks.AMETHYST_BLOCK.getDefaultState(), FabricBlockSettings.copy(AMETHYST_BRICKS)), "polished_dripstone_stairs","");
+        POLISHED_DRIPSTONE_SLAB = generator.block.registerSlabBlock(new SlabBlock(Properties.DRIPSTONE), "polished_dripstone_slab","");
+        POLISHED_DRIPSTONE_STAIRS = generator.block.registerSlabBlock(new CookieCoreStairsBlock({POLISHED_DRIPSTONE.getDefaultState(), FabricBlockSettings.copy(POLISHED_DRIPSTONE)), "polished_dripstone_stairs","");
 
         //Crying Obsidian Variants
         CRYING_OBSIDIAN_TILES = generator.block.registerAllSidedBlock(new Block(Properties.CRYING_OBSIDIANS), "crying_obsidian_tiles","");
 
         //Dirt Bricks
         DIRT_BRICKS = generator.block.registerAllSidedBlock(new Block(Properties.DIRT_BRICKS), "dirt_bricks","");
-        DIRT_BRICK_SLAB = generator.block.registerSlabBlock(new SlabBlock(Properties.AMETHYST), "dirt_brick_slab","");
-        DIRT_BRICK_STAIRS = generator.block.registerSlabBlock(new CookieCoreStairsBlock(Blocks.AMETHYST_BLOCK.getDefaultState(), FabricBlockSettings.copy(AMETHYST_BRICKS)), "dirt_brick_stairs","");
+        DIRT_BRICK_SLAB = generator.block.registerSlabBlock(new SlabBlock(Properties.DIRT_BRICKS), "dirt_brick_slab","");
+        DIRT_BRICK_STAIRS = generator.block.registerSlabBlock(new CookieCoreStairsBlock(DIRT_BRICKS.getDefaultState(), FabricBlockSettings.copy(DIRT_BRICKS)), "dirt_brick_stairs","");
         MOSSY_DIRT_BRICKS = generator.block.registerAllSidedBlock(new Block(Properties.DIRT_BRICKS), "mossy_dirt_bricks","");
-        MOSSY_DIRT_BRICK_SLAB = generator.block.registerSlabBlock(new SlabBlock(Properties.AMETHYST), "mossy_dirt_brick_slab","");
-        DIRT_BRICK_STAIRS = generator.block.registerSlabBlock(new CookieCoreStairsBlock(Blocks.AMETHYST_BLOCK.getDefaultState(), FabricBlockSettings.copy(AMETHYST_BRICKS)), "mossy_dirt_brick_stairs","");Registry.register(Registry.BLOCK, new Identifier(MOD_ID, "mossy_dirt_brick_slab"), MOSSY_DIRT_BRICK_SLAB);
+        MOSSY_DIRT_BRICK_SLAB = generator.block.registerSlabBlock(new SlabBlock(Properties.DIRT_BRICKS), "mossy_dirt_brick_slab","");
+        DIRT_BRICK_STAIRS = generator.block.registerSlabBlock(new CookieCoreStairsBlock(MOSSY_DIRT_BRICKS.getDefaultState(), FabricBlockSettings.copy(MOSSY_DIRT_BRICKS)), "mossy_dirt_brick_stairs","");
         CHISELED_DIRT = generator.block.registerAllSidedBlock(new Block(Properties.DIRT_BRICKS), "chiseled_dirt","");
         DIRT_TILES = generator.block.registerAllSidedBlock(new Block(Properties.DIRT_BRICKS), "dirt_tiles","");
         POLISHED_DIRT = generator.block.registerAllSidedBlock(new Block(Properties.DIRT_BRICKS), "polished_dirt","");
