@@ -94,7 +94,7 @@ public class AssemblyBlocks {
         //Polished Dripstone
         POLISHED_DRIPSTONE = generator.block.registerAllSidedBlock(new Block(Properties.DRIPSTONE), "polished_dripstone","");
         POLISHED_DRIPSTONE_SLAB = generator.block.registerSlabBlock(new SlabBlock(Properties.DRIPSTONE), "polished_dripstone_slab","");
-        POLISHED_DRIPSTONE_STAIRS = generator.block.registerSlabBlock(new CookieCoreStairsBlock({POLISHED_DRIPSTONE.getDefaultState(), FabricBlockSettings.copy(POLISHED_DRIPSTONE)), "polished_dripstone_stairs","");
+        POLISHED_DRIPSTONE_STAIRS = generator.block.registerSlabBlock(new CookieCoreStairsBlock(POLISHED_DRIPSTONE.getDefaultState(), FabricBlockSettings.copy(POLISHED_DRIPSTONE)), "polished_dripstone_stairs","");
 
         //Crying Obsidian Variants
         CRYING_OBSIDIAN_TILES = generator.block.registerAllSidedBlock(new Block(Properties.CRYING_OBSIDIANS), "crying_obsidian_tiles","");
@@ -116,7 +116,7 @@ public class AssemblyBlocks {
 
     }
 
-    public static class Properties {
+    static class Properties {
         public static final FabricBlockSettings DIRT_BRICKS = FabricBlockSettings
                 .copyOf(DIRT)
                 .breakByHand(true)
