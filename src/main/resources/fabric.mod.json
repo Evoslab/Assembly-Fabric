@@ -8,15 +8,21 @@
     "Evoslab"
   ],
   "contributors": [
-    "Hatsondogs"
+    "StevenPlayzz",
+    "Hatsondogs",
+    "Evo_934"
   ],
-  "contact": {},
+  "contact": {
+    "homepage": "https://www.curseforge.com/minecraft/mc-mods/assembly-fabric",
+    "sources": "https://github.com/Evoslab/Assembly-Fabric",
+    "issues": "https://github.com/Evoslab/Assembly-Fabric/issues"
+  },
   "license": "MIT",
   "icon": "assets/assembly/icon.png",
   "environment": "*",
   "entrypoints": {
     "main": [
-      "com.github.evoslab.assembly.Assembly"
+      "com.evoslab.assembly.core.Assembly"
     ],
     "client": [],
     "server": []
@@ -25,7 +31,9 @@
     "assembly.mixins.json"
   ],
   "depends": {
-    "fabricloader": ">=0.11.1",
-    "fabric": "*"
+    "fabricloader": ">=0.11.3",
+    "fabric": "*",
+    "minecraft": "1.17.x",
+    "java": "16"
   }
 }

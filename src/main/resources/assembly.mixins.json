@@ -1,6 +1,6 @@
 {
   "required": true,
-  "package": "com.github.evoslab.assembly.mixin",
+  "package": "com.evoslab.assembly.core.mixin",
   "compatibilityLevel": "JAVA_8",
   "mixins": [
     "BlocksMixin"
