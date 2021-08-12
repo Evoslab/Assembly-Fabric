@@ -1,0 +1,13 @@
+{
+  "variants": {
+    "type=bottom": {
+      "model": "assembly:block/amethyst_brick_slab"
+    },
+    "type=double": {
+      "model": "assembly:block/amethyst_bricks"
+    },
+    "type=top": {
+      "model": "assembly:block/amethyst_brick_slab_top"
+    }
+  }
+}

@@ -2,9 +2,7 @@
   "required": true,
   "package": "com.evoslab.assembly.core.mixin",
   "compatibilityLevel": "JAVA_8",
-  "mixins": [
-    "BlocksMixin"
-  ],
+  "mixins": [],
   "client": [],
   "server": [],
   "injectors": {
